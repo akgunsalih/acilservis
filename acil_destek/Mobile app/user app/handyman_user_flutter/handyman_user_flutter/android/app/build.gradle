@@ -1,0 +1,61 @@
+
+
+buildscript {
+    repositories {
+        // ...
+        maven { url 'https://plugins.gradle.org/m2/' } // Gradle Plugin Portal
+    }
+    dependencies {
+        // ...
+        // OneSignal-Gradle-Plugin
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.14.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+//apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    signingConfigs {
+        release {
+            storeFile file('C:/Users/AdminOmen/Desktop/acildestek.jks')
+            storePassword 'acil12345'
+            keyAlias 'acildestek'
+            keyPassword 'acil12345'
+        }
+    }
+    compileSdkVersion 33
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        applicationId 'com.fastturtles.acildestek'
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 34
+        versionName '5.12.0'
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10" //1530 //1.7.10
+
+    implementation "androidx.appcompat:appcompat:1.5.1" //142
+
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
+    implementation 'com.google.firebase:firebase-analytics'
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "763055268393",
+    "project_id": "acil-destek-9d121",
+    "storage_bucket": "acil-destek-9d121.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763055268393:android:49b2197625a47b03237238",
+        "android_client_info": {
+          "package_name": "com.fastturtles.acildestek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763055268393-dc37qi01tq5538j9gammsihd6kaql7kl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfLQKwY_GS4NuMeZSqJkV0CIzJ9vNnXDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763055268393-dc37qi01tq5538j9gammsihd6kaql7kl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
